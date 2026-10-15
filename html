@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InvoiceSort AI | Smart Document Organizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">🌿 InvoiceSort <span>AI</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#history">History</a>
+    </nav>
+    <span class="status"><i></i> Local Workspace</span>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <span class="pill">OPEN SOURCE • PRIVACY FIRST</span>
+        <h1>Your documents,<br> <span>perfectly sorted.</span></h1>
+        <p>
+          Organize invoices, receipts and bills in seconds.
+          A smarter document workspace for freelancers and small businesses.
+        </p>
+        <a class="primary-btn" href="#dashboard">Start Organizing →</a>
+        <div class="trust">
+          <span>🔒 Privacy focused</span>
+          <span>💻 Browser based</span>
+          <span>🌱 Open source</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card-top">
+          <span>✦ Document Intelligence</span>
+          <span class="live">● Ready</span>
+        </div>
+        <div class="file-illustration">📂</div>
+        <h3>One place for every document</h3>
+        <p>Upload files and organize your workspace.</p>
+        <div class="mini-stats">
+          <div><strong>PDF</strong><small>Invoices</small></div>
+          <div><strong>JPG</strong><small>Receipts</small></div>
+          <div><strong>TXT</strong><small>Notes</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace" id="dashboard">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">YOUR WORKSPACE</span>
+          <h2>Document Dashboard</h2>
+          <p>Upload and manage your documents in one place.</p>
+        </div>
+        <label for="fileInput" class="primary-btn upload-btn">
+          + Upload Files
+        </label>
+        <input id="fileInput" type="file" multiple
+               accept=".pdf,.jpg,.jpeg,.png,.txt,.csv"
+               hidden>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>Total Documents</span>
+          <h2 id="totalCount">0</h2>
+          <small>Files in your workspace</small>
+        </div>
+        <div class="stat-card">
+          <span>Invoices</span>
+          <h2 id="invoiceCount">0</h2>
+          <small>Business documents</small>
+        </div>
+        <div class="stat-card">
+          <span>Receipts</span>
+          <h2 id="receiptCount">0</h2>
+          <small>Purchase records</small>
+        </div>
+        <div class="stat-card">
+          <span>Categories</span>
+          <h2 id="categoryCount">0</h2>
+          <small>Types identified</small>
+        </div>
+      </div>
+
+      <div class="upload-zone" id="dropZone">
+        <div class="upload-icon">⇧</div>
+        <h3>Drop your documents here</h3>
+        <p>or choose files from your device</p>
+        <label for="fileInput" class="secondary-btn">Choose Files</label>
+        <small>PDF, JPG, PNG, TXT and CSV</small>
+      </div>
+
+      <div class="documents" id="history">
+        <div class="document-heading">
+          <div>
+            <h2>Recent Documents</h2>
+            <p>Your organized file collection</p>
+          </div>
+          <input type="search" id="searchInput"
+                 placeholder="Search documents...">
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="All">All Files</button>
+          <button class="filter" data-filter="Invoice">Invoices</button>
+          <button class="filter" data-filter="Receipt">Receipts</button>
+          <button class="filter" data-filter="Utilities">Utilities</button>
+          <button class="filter" data-filter="Other">Other</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Document</th>
+                <th>Category</th>
+                <th>Size</th>
+                <th>Date Added</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="fileList"></tbody>
+          </table>
+        </div>
+        <p id="emptyMessage" class="empty-message">
+          No documents yet. Upload a file to get started!
+        </p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <div>✦</div>
+        <h3>Smart Sorting</h3>
+        <p>Automatically suggest categories using document names and file types.</p>
+      </div>
+      <div class="feature">
+        <div>🔐</div>
+        <h3>Privacy Focused</h3>
+        <p>Files stay in your browser in this prototype. No upload server is used.</p>
+      </div>
+      <div class="feature">
+        <div>⚡</div>
+        <h3>Simple Workflow</h3>
+        <p>Find, filter and manage documents from a single dashboard.</p>
+      </div>
+    </section>
+
+    <section class="open-source">
+      <span class="eyebrow">BUILT IN THE OPEN</span>
+      <h2>AI should be open, useful and accessible.</h2>
+      <p>
+        InvoiceSort AI is designed to support open-weight models and local
+        inference, giving developers control over costs, data and customization.
+      </p>
+      <a href="https://github.com/" target="_blank"
+         rel="noopener noreferrer" class="secondary-btn">
+        Explore GitHub ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#home">🌿 InvoiceSort <span>AI</span></a>
+    <p>Built with HTML, CSS and JavaScript · Open-source project</p>
+    <small>Local browser prototype. Avoid storing sensitive documents on shared devices.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
